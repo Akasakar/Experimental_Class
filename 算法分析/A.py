@@ -29,7 +29,7 @@ def dfs(r, c, x, y, n):
             dfs(r + i // 2 * s, c + i % 2 * s, tx + i // 2, ty + i % 2, s)
 
 def main():
-    k, x, y = map(int, input().split());
+    k, x, y = map(int, input().split())
 
     global g, idx
     idx = 0
