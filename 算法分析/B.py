@@ -11,6 +11,8 @@ def solve(i, j):
     if i + 1 < j:
         print('(', end='')
     
+    global dp, a
+
     for k in range(i + 1, j):
         if dp[i][j] == dp[i][k] + dp[k][j] + a[i] * a[k] * a[j]:
             solve(i, k)
