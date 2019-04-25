@@ -15,7 +15,7 @@ const _max int = (1 << 10) + 10
 var g [_max][_max] int
 var idx int
 
-func dfs(r int, c int, x int, y int, n int) {
+func dfs(r, c, x, y, n int) {
     if n >= 2 {
         var s int = n >> 1
         var tx int = r + s - 1
