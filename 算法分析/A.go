@@ -50,7 +50,7 @@ func output(n int) {
 }
 
  func main() {
-     var k, x, y int
+     var k, x, y int    //2^k * 2^k 棋盘
      fmt.Scanf("%d%d%d", &k, &x, &y)
 
      n := 1 << uint(k)
