@@ -52,8 +52,6 @@ int calc(int a, int b, char c)
     else return a * b;
 }
 
-int cnt = 0;
-
 void print(int i, int j, int x)
 {
     if(i <= j) putchar('(');
