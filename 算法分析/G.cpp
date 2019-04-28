@@ -33,7 +33,9 @@
 #endif // Akasaka
 
 
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <bitset>
+#include <cstdio>
 
 using namespace std;
 
@@ -43,7 +45,7 @@ int n;
 int sum;
 int ans;
 int cnt[2];
-bool g[_max][_max];
+bitset<_max> g[_max];
 
 void printG()
 {
