@@ -91,7 +91,9 @@ int main()
 {
     scanf("%d", &n);
     sum = (n + 1) * n / 2;
+
     dfs(0);
+
     printf("%d\n", ans);
     return 0;
 }
