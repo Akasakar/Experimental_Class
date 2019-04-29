@@ -60,7 +60,8 @@ vector<bool> vis;
 int cur, cost = inf;
 
 /* *
- * 暴搜+
+ * 暴搜+剪枝
+ * */
 void dfs(int c)
 {
     int u = 0;
