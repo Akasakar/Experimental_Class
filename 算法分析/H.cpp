@@ -64,8 +64,7 @@ int cur, cost = inf;
  * */
 void dfs(int c)
 {
-    int u = 0;
-    if(c != 0) u = path[c -1];
+    int u = path[c -1];
 
     if(c == n)
     {
@@ -77,7 +76,7 @@ void dfs(int c)
         return;
     }
     for(int v = 0; v < n; v++)
-        if(!vis[v] && cur  + d[u][v] + d[v][0] < cost)
+        if(!vis[v] && cur+ d[u][v] < cost)
         {
             vis[v] = 1;
             path.push_back(v);
@@ -106,7 +105,8 @@ int main()
             d[i].push_back(x);
         }
 
-    dfs(0);
+    path.push_back(0);
+    dfs(1);
 
     printf("%d\n", cost);
     for(int i = 0; i < ans.size(); i++)
