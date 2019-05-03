@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Akasaka</title>
-            <style>
-                body
-                {
-                    background-color:#d0e4fe;
-                }
-                h1
-                {
-                    color:plum;
-                    text-align:center;
-                }
-                p
-                {
-                    text-align:center;
-                    font-family:"Times New Roman";
-                    font-size:20px;
-                }
-            </style>
+        <meta name = "Author" congtent = "233" charset = "utf-8">
+        <title>矩阵连乘问题</title>
+        <link rel = "stylesheet" type = "text/css" href = "B.css">
+        <script src = "B.js"> </script>
     </head>
-    <script src = "B.js"></script>
     <body>
-        <h1>矩阵连乘问题</h1>
-        <p>
-            <label>矩阵数量</label><input id = "idn" type = "number" min = "1" max = "99999999" required></input>
-            <button onclick="main()">Enter</button>
-        </p>
-        <p id = "matrix"></p>
+        <div class = "top">实验一：矩阵连乘问题</div>
+        <div class = "left">
+            <p>
+                <label>矩阵数量：</label>
+                <input id = "N" type = "number" min = "2" max = "999" placeholder="整数N" required></input>
+                <button onclick="inputN()">Enter</button>
+            </p>
+            <div id = "arrayA"></div>
+        </div>
+        <div class = "right">
+            <div><p>矩阵连乘最优值：<ins id = "ans"></ins></p></div>
+            <hr>
+            <div><p id = "print">连乘顺序：<br></p></div>
+        </div>
     </body>
 </html>

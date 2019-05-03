@@ -1,0 +1,31 @@
+html, body 
+{
+    height: 100%;
+}
+
+div.top
+{
+    float: top;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    font-size: 48px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+div.left 
+{ 
+    float: left; 
+    width: 40%; 
+    height: 100%; 
+    background-color: #ff00000a;
+}
+
+div.right 
+{ 
+    float: left; 
+    width: 60%; 
+    height: 100%; 
+    background-color: #00ff000a;
+}
