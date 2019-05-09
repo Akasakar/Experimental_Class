@@ -45,8 +45,8 @@ func calc(a, b int, c string) (int) {
 }
 
 func print(i, j, x int) {
-    if i <= j {
-        fmt.Print("(")
+    if i == j {
+        fmt.Print(v[i % n])
     }
     ti, tj := i % n, j % n
     for k := i; k < j; k++ {
@@ -54,9 +54,11 @@ func print(i, j, x int) {
         var ok bool = false
         for p := 0; p < 4; p++ {
             if dp[ti][tj][x] == calc(dp[ti][tkl][p / 2], dp[tkr][tj][p % 2], e[tkl]) {
+                fmt.Print("(")
                 print(i, k, p / 2)
-                fmt.Print(e[tkl])
+                fmt.Print(")", e[tkl], "(")
                 print(k + 1, j, p % 2)
+                fmt.Print(")")
                 ok = true
                 break
             }
@@ -64,12 +66,6 @@ func print(i, j, x int) {
         if ok {
             break
         }
-    }
-    if i == j {
-        fmt.Print(v[ti])
-    }
-    if i <= j {
-        fmt.Print(")")
     }
 }
 
