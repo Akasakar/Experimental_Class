@@ -1,9 +1,10 @@
 # -*- coding: UTF-8 -*-
 '''
 # Author:   Akasaka
-# FileName: Cx.py
-# Created:  2019.05.08(UTC+0800)21.33.51(星期三)
+# FileName: C3.6.3.py
+# Created:  2019.05.09(UTC+0800)22.00.41(星期四)
 '''
+
 
 from pyecharts import options as opts
 from pyecharts.charts import Page, Radar
