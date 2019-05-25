@@ -37,7 +37,7 @@ def Kmeans(data, k):
     return ans, p[1]
 
 def main():
-    data = pandas.read_csv("实验5-iris.txt").values.tolist()
+    data = pandas.read_csv("实验5-iris.txt", header = None).values.tolist()
     mp, p = Kmeans([[dr[0], dr[1]] for dr in data], 3)
     ciris = []
     for pr in p:
@@ -54,12 +54,9 @@ def main():
         for vr in v:
             for dr in data:
                 if vr[0] == dr[0] and vr[1] == dr[1]:
-                    print(vr, end = " ")
+                    s = "Expect({0}) ForeCast({1}) ==> {2}"
+                    print(vr, s.format(dr[-1][5:], ciris[k][5:], ["Wa", "Ac"][ciris[k] == dr[-1]]))
                     cnt[ciris[k] == dr[-1]] += 1
-                    if ciris[k] == dr[-1]:
-                        print("true:", dr[-1])
-                    else:
-                        print("False: is not", ciris[k], "True:", dr[-1])
         print("class", ciris[k], cnt)
         print("------------------------------------------")
 
