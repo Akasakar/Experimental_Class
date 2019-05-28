@@ -38,7 +38,7 @@ def Kmeans(data, k):
 
 def main():
     data = pandas.read_csv("实验5-iris.txt", header = None).values.tolist()
-    mp, p = Kmeans([[dr[0], dr[1]] for dr in data], 3)
+    mp, p = Kmeans([dr[:-1] for dr in data], 3)
     ciris = []
     for pr in p:
         i, pos, dis = 0, 0, 1e9
